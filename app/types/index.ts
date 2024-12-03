@@ -7,19 +7,33 @@ export interface User {
 
 export interface Pet {
   id: string;
+  pid: string;
   name: string;
   species: string;
   breed: string;
-  age: number;
+  gender: 'Male' | 'Female';
+  age: {
+    years: number;
+    months: number;
+    days: number;
+    weeks: number;
+  };
+  dob?: string;
+  attitude?: string;
   ownerId: string;
 }
 
 export interface Client {
   id: string;
+  title: string;
   name: string;
   email: string;
   phone: string;
+  secondaryPhone?: string;
   address: string;
+  nic?: string;
+  preferredLanguage: string;
+  smsNotifications: boolean;
 }
 
 export interface Appointment {
